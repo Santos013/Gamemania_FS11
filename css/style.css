@@ -11,12 +11,14 @@
      JOGO DO FROGGY
          https://flexboxfroggy.com/
 
-    
-
  */
 
+ @font-face {
+    font-family: "Glory-ExtraBold"; /*apelido*/
+    src: url(../fonts/Glory/static/Glory-ExtraBold.ttf);
+ }
 
-/* reset da página */
+ /* reset da página */
 * {
     margin: 0;
     padding: 0;
@@ -31,12 +33,32 @@ header {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    background-color: rgb(173, 102, 102);
+    background-color: black;
 }
 
+header .header-flex {
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+}
 
-header .intem-menu {
+header .logotipo {
+    width: 280px;
+}
+
+/* navbar */
+header .menu {
+    width: 60%;
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*links*/
+header .menu .intem-menu {
     text-decoration: none;
     color: white;
     text-transform: uppercase;
+    font-family: "Glory-ExtraBold";
 }
