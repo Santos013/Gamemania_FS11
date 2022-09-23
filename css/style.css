@@ -1,21 +1,15 @@
-/*
-    CSS TRICKS
-         https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-
-     ORIGAMID
-         https://origamid.com//projetos/flexbox-guia-completo/
-
-     MDN
-         https://developer.mozilla.org/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox/
-
-     JOGO DO FROGGY
-         https://flexboxfroggy.com/
-
- */
-
  @font-face {
     font-family: "Glory-ExtraBold"; /*apelido*/
     src: url(../fonts/Glory/static/Glory-ExtraBold.ttf);
+ }
+
+ @font-face {
+    font-family: "TitilliumWeb-Black";
+    src: url(../fonts/Titillium_Web/TitilliumWeb-Black.ttf);
+ }
+ @font-face {
+    font-family: "TitilliumWeb-SemiBold";
+    src: url(../fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf);
  }
 
  /* reset da página */
@@ -25,15 +19,21 @@
     box-sizing: border-box;
 }
 
+/********** CUSTOMIZAÇÃO DO BROOTSTRAP ***********/
+.container {
+    max-width: 1200px;
+}
+
+/********** HEADER ***********/
+
 header {
     background-color: black;
 }
 
 .container-grid {
+    margin: 0 auto;
     max-width: 1200px;
     width: 100%;
-    margin: 0 auto;
-    background-color: black;
 }
 
 header .header-flex {
@@ -61,4 +61,66 @@ header .menu .intem-menu {
     color: white;
     text-transform: uppercase;
     font-family: "Glory-ExtraBold";
+}
+
+/**********BANNER***********/
+
+.banner {
+    height: 600px;
+    background-color: salmon;
+    background-image: url(../images/Imagem\ banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner .banner-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 600px;
+}
+
+.banner .banner-box .banner-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 500px;
+    height: 280px;
+
+    font-family: "TitilliumWeb-SemiBold";
+    color: white;
+}
+
+.banner .banner-box .banner-info h2 {
+    font-family: "TitilliumWeb-Black";
+    font-size: 65px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.banner .banner-box .banner-info p {
+    margin-top: -80px;
+    font-size: 25px;
+    color: #009688;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.banner .banner-info .button-banner {
+    align-self: center; /*propiedade para filho/intem flex somente ele!!*/
+    width: 250px;
+    height: 65px;
+    color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    background-color: #a8a6a6;
+    border-radius: 10px;
 }

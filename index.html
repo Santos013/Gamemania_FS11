@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameMania</title>
+
+    <!-- CSS DO BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./css/style.css">
 
 </head>
+
 <body>
     <header>
-        <!--flex container-->
-        <div class="container-grid header-flex">
+        <!--flex container brootstrap + flexbox-->
+        <div class="container header-flex">
             <img class="logotipo" src="./images/logo Game mania.png" alt="texto alternativo" title="Site GameMania">
             
             <!--flex container-->
@@ -21,10 +27,31 @@
                 <a class="intem-menu" href="#">Jogos</a>
                 <a class="intem-menu" href="#">Acessórios</a>
                 <a class="intem-menu" href="#">Pc gamers</a>
-                <a class="intem-menu" href="#">Consoles</a>
+                <a class="intem-menu" href="#">Login</a>
             </nav>
         </div>
         
     </header>
+
+    <!-- BANNER INICIAL -->
+    <main>
+        <section class="banner">
+            <div class="container-grid banner-box">
+                <article class="banner-info">
+                    <h2>Cyberpunk 77</h2>
+                    <p>Jogo tem correção de bugs</p>
+                    <a href="#" class="button-banner">Saiba mais</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer>
+       <p>Todos os direitos reservados</p> 
+    </footer>
+
+    <!-- JS DO BROOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
