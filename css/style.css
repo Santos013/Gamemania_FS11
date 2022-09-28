@@ -19,6 +19,22 @@
     box-sizing: border-box;
 }
 
+body {
+    /* 
+        propriedades de fonts são herdáveis porém os 
+        links e campos de formulários não as herdam 
+    */
+    font-family: "TitilliumWeb-SemiBold";
+    font-size: 16px;
+    color: white;
+}
+
+/* CSS GENÉRICO */
+.showNavbar {
+    left: 0 !important;
+    opacity: 0.95 !important;
+}
+
 /********** CUSTOMIZAÇÃO DO BROOTSTRAP ***********/
 .container {
     max-width: 1200px;
@@ -62,6 +78,9 @@ header .menu .intem-menu {
     text-transform: uppercase;
     font-family: "Glory-ExtraBold";
 }
+
+
+.hamburger-icon {display: none;}
 
 /**********BANNER***********/
 
@@ -123,4 +142,109 @@ header .menu .intem-menu {
 
     background-color: #a8a6a6;
     border-radius: 10px;
+}
+
+/**************** PRODUTOS  ****************/
+.produtos {
+    padding: 40px;
+    background-color: #1E1C21;
+
+
+}
+
+.produtos h2 {
+    margin-bottom: 40px;
+}
+
+.produtos .card {
+    max-width: 250px;
+    min-width: 230px;
+    margin-bottom: 20px;
+
+    background-image: linear-gradient(to bottom, #1E1C21, #757373);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+}
+
+
+.produtos .card-title {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+.produtos .card-buy {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #009688;
+    color: black;
+    text-transform: uppercase;
+    border: 1px solid #009688;
+    border-radius: 10px;
+}
+
+/* TABLETS */
+@media screen and (max-width: 991px) {
+    /* imagem alternativa para o tablet
+    .banner {
+        background-image: url(../images/banner_lol.png);
+        
+    } */
+
+
+
+    header .menu {
+        position: fixed;
+        /* Referencial Viewport */
+        top: 0;
+        /*top/bottom */
+        left: -80%;
+        /*left/right */
+        z-index: 10;
+        /*controle de camada */
+
+        /* flex */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 80%;
+        height: 100%;
+        background-color: #1E1C21;
+        opacity: 0;
+
+        transition: left 0.4s, opacity 0.5s;
+    }
+
+    header .menu a {
+        border-left: 3px dotted white;
+        width: 80%;
+        margin-bottom: 20px;
+        font-size: 1.4rem;
+        padding: 20px;
+    }
+
+    header .hamburger-icon {
+        width: 40px;
+    }
+
+    .hamburger-icon {display: block;}
+
+
+}
+
+/* Smartphone */
+@media screen and (max-width: 767px) {
+    header .logotipo {
+        width: 240px;
+    }
+    
+    header .hamburger-icon {
+        width: 35px;
+    }
+    
+    header .menu a {
+        border-left: 2px dotted white;
+        margin-bottom: 15px;
+        font-size: 1rem;
+        padding: 10px;
+    }
 }
